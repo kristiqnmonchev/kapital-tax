@@ -7,7 +7,11 @@ const SITE = {
   phone: "+359 88 123 4567",
   phoneHref: "+359881234567",
   email: "office@kapitaltax.bg",
-  address: "бул. „Витоша“ 100, ет. 4, София 1000",
+  // Офиси
+  offices: [
+    { city: "Пазарджик", address: "ул. „Петко Машев“ 9, офис център 1, ет. 1, офис 7" },
+    { city: "Пловдив", address: "ул. „Христо Ботев“ 11, ет. 1" }
+  ],
   // Ако използвате Formspree / собствен бекенд, поставете URL тук.
   // Празно = формата отваря имейл клиента с попълненото запитване.
   formEndpoint: ""
@@ -121,7 +125,7 @@ function renderChrome() {
             <ul>
               <li><a href="tel:${SITE.phoneHref}">${SITE.phone}</a></li>
               <li><a href="mailto:${SITE.email}">${SITE.email}</a></li>
-              <li>${SITE.address}</li>
+              ${SITE.offices.map((o) => `<li>гр. ${o.city}, ${o.address}</li>`).join("")}
               <li>Пон – Пет: 9:00 – 18:00</li>
             </ul>
           </div>
