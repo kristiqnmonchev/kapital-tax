@@ -25,6 +25,7 @@
     ".gate-box{position:relative;z-index:1;width:min(420px,100%);background:rgba(255,255,255,.85);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-radius:28px;padding:44px 32px 36px;text-align:center;box-shadow:0 40px 90px -30px rgba(31,46,37,.45),0 0 0 1px #e2e8e2;animation:gin .8s cubic-bezier(.2,.8,.2,1) both}" +
     "@keyframes gin{from{opacity:0;transform:translateY(30px) scale(.97)}}" +
     ".gate-logo{width:64px;height:64px;margin:0 auto 20px;border-radius:20px;display:grid;place-items:center;color:#fff;font-weight:800;font-size:1.6rem;background:linear-gradient(135deg,#557362,#7f9a86 55%,#a9c2a9);box-shadow:0 14px 30px -10px rgba(85,115,98,.7)}" +
+    ".gate-wm{display:inline-flex;align-items:center;margin:0 0 18px;font:800 2rem Manrope,system-ui,sans-serif;letter-spacing:-.035em;line-height:1}.gate-wm .wm-k{color:#16231c}.gate-wm .wm-t{position:relative;z-index:0;color:#fff;padding:.08em .5em .12em .55em;margin-left:.06em}.gate-wm .wm-t::before{content:\"\";position:absolute;inset:0;z-index:-1;background:#4e6b54;border-radius:.3em;transform:skewX(-18deg)}.gate .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}" +
     ".gate h1{margin:0 0 6px;font-size:1.5rem;color:#1b2620;letter-spacing:-.02em}" +
     ".gate p{margin:0 0 26px;color:#69756c;font-size:.98rem}" +
     ".gate-pins{display:flex;justify-content:center;gap:12px}" +
@@ -45,8 +46,8 @@
     g.setAttribute("aria-labelledby", "gate-title");
     g.innerHTML =
       '<form class="gate-box" autocomplete="off">' +
-      '<div class="gate-logo">K</div>' +
-      '<h1 id="gate-title">Kapital Tax</h1>' +
+      '<div class="gate-wm"><span class="wm-k">Kapital</span><span class="wm-t">Tax</span></div>' +
+      '<h1 id="gate-title" class="sr">Kapital Tax</h1>' +
       "<p>Сайтът е в процес на разработка.<br>Въведете код за достъп.</p>" +
       '<div class="gate-pins">' +
       [0, 1, 2, 3].map(function (i) {

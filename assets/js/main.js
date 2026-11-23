@@ -10,7 +10,7 @@ const SITE = {
   // Офиси
   offices: [
     { city: "Пазарджик", address: "ул. „Петко Машев“ 9, офис център 1, ет. 1, офис 7" },
-    { city: "Пловдив", address: "ул. „Христо Ботев“ 11, ет. 1" }
+    { city: "Пловдив", address: "Рилон център, ул. „Христо Ботев“ 115, ет. 3, офис 7" }
   ],
   // Ако използвате Formspree / собствен бекенд, поставете URL тук.
   // Празно = формата отваря имейл клиента с попълненото запитване.
@@ -79,7 +79,7 @@ function renderChrome() {
     header.className = "header";
     header.innerHTML = `
       <div class="container">
-        <a href="index.html" class="logo" aria-label="Kapital Tax — начало"><span class="logo-mark">K</span><span>Kapital <b>Tax</b></span></a>
+        <a href="index.html" class="logo" aria-label="Kapital Tax — начало"><span class="wm"><span class="wm-k">Kapital</span><span class="wm-t">Tax</span></span></a>
         <nav class="nav" aria-label="Основна навигация">
           ${NAV.map(([h, t]) => `<a href="${h}"${h.startsWith(page) ? ' class="active" aria-current="page"' : ""}>${t}</a>`).join("")}
         </nav>
@@ -96,7 +96,7 @@ function renderChrome() {
       <div class="container">
         <div class="footer-grid">
           <div>
-            <a href="index.html" class="logo"><span class="logo-mark">K</span><span>Kapital <b>Tax</b></span></a>
+            <a href="index.html" class="logo"><span class="wm"><span class="wm-k">Kapital</span><span class="wm-t">Tax</span></span></a>
             <p>Пълно счетоводно и данъчно обслужване за фирми и свободни професии. Точност, коректност и спокойствие — всеки месец.</p>
             <div class="socials">
               <a href="#" aria-label="LinkedIn">${icon("linkedin")}</a>

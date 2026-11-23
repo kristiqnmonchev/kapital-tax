@@ -805,3 +805,16 @@ h1 { letter-spacing: -.03em; }
 .staff-note b { color: var(--ink); display: block; margin-bottom: 4px; }
 .staff-note p { margin: 0; color: var(--text); font-size: .97rem; }
 .staff-note strong { color: var(--sage-700); }
+
+/* лого Kapital Tax */
+.wm { display: inline-flex; align-items: center; font-family: "Manrope", sans-serif; font-weight: 800; font-size: 1.5rem; letter-spacing: -.035em; line-height: 1; }
+.wm-k { color: #16231c; }
+.wm-t { position: relative; z-index: 0; color: #fff; padding: .08em .5em .12em .55em; margin-left: .06em; }
+.wm-t::before { content: ""; position: absolute; inset: 0; z-index: -1; background: #4e6b54; border-radius: .3em; transform: skewX(-18deg); transition: background .3s; }
+.logo { gap: 0; }
+.logo:hover .wm-t::before { background: #3f5a4b; }
+.footer .wm-k { color: #fff; }
+.footer .wm-t::before { background: #5f7d68; }
+.loader .wm { font-size: 2.6rem; animation: loaderPulse 1s var(--ease) infinite alternate; }
+@keyframes loaderPulse { from { transform: scale(.96); opacity: .7; } to { transform: scale(1.02); opacity: 1; } }
+@media (max-width: 640px) { .header .wm { font-size: 1.3rem; } }
