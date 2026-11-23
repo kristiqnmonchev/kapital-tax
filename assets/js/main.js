@@ -91,6 +91,14 @@ function renderChrome() {
       </div>`;
   }
   if (footer) {
+    footer.insertAdjacentHTML("beforebegin", `
+      <aside class="subfoot" aria-label="VixRate">
+        <div class="container">
+          <img class="subfoot-ic" src="assets/img/vixrate.png" alt="VixRate" width="34" height="34" loading="lazy">
+          <p><b>Автоматизираме работните процеси с VixRate.</b> Чрез платформата ви осигуряваме достъп 24/7 до състоянието на фирмата, вземанията и задълженията, фактурирането и склада.</p>
+          <a href="https://vixrate.com" target="_blank" rel="noopener">vixrate.com ${icon("arrow")}</a>
+        </div>
+      </aside>`);
     footer.className = "footer";
     footer.innerHTML = `
       <div class="container">

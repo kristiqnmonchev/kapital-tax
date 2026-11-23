@@ -818,3 +818,18 @@ h1 { letter-spacing: -.03em; }
 .loader .wm { font-size: 2.6rem; animation: loaderPulse 1s var(--ease) infinite alternate; }
 @keyframes loaderPulse { from { transform: scale(.96); opacity: .7; } to { transform: scale(1.02); opacity: 1; } }
 @media (max-width: 640px) { .header .wm { font-size: 1.3rem; } }
+
+/* VixRate sub-footer */
+.subfoot { position: relative; z-index: 1; background: var(--sage-50); border-top: 1px solid var(--line); }
+.subfoot .container { display: flex; align-items: center; gap: 14px; padding: 16px 0; }
+.subfoot-ic { width: 34px; height: 34px; flex-shrink: 0; border-radius: 10px; display: block; object-fit: cover; }
+.subfoot p { margin: 0; flex: 1; font-size: .88rem; color: var(--muted); line-height: 1.5; }
+.subfoot p b { display: block; color: var(--ink); font-weight: 700; margin-bottom: 2px; }
+.subfoot a { display: inline-flex; align-items: center; gap: 6px; font-size: .88rem; font-weight: 700; color: var(--sage-700); white-space: nowrap; }
+.subfoot a svg { width: 14px; transition: transform .3s var(--ease); }
+.subfoot a:hover svg { transform: translateX(3px); }
+@media (max-width: 640px) {
+  .subfoot .container { flex-wrap: wrap; align-items: flex-start; }
+  .subfoot p { flex-basis: calc(100% - 44px); }
+  .subfoot a { margin-left: 44px; }
+}
