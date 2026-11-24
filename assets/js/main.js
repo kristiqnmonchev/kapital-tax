@@ -4,8 +4,8 @@
 
 /* --- Настройки на фирмата (сменете с реалните данни) --- */
 const SITE = {
-  phone: "+359 88 123 4567",
-  phoneHref: "+359881234567",
+  phone: "0898 739 734",
+  phoneHref: "+359898739734",
   email: "office@kapitaltax.bg",
   // Офиси
   offices: [
